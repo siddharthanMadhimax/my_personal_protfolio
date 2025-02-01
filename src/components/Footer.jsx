@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaLinkedin, FaPhone } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaPhone,FaGithub } from 'react-icons/fa';
 import { myFoot } from '../constants';
 
 const Footer = () => {
@@ -8,8 +8,8 @@ const Footer = () => {
       <div className='flex items-center justify-center p-10 gap-5 sm:gap-20'>
         {myFoot.map((item, index) => {
           let icon;
-          if (item.name === "instagram") {
-            icon = <FaInstagram className="sm:mr-2 mr-1 text-gray-200" />;
+          if (item.name === "gitHub") {
+            icon = <FaGithub className="sm:mr-2 mr-1 text-gray-200" />;
           } else if (item.name === "linkedin") {
             icon = <FaLinkedin className="sm:mr-2 mr-1 text-gray-200" />;
           } else if (item.name === "6380448496") {
@@ -18,7 +18,7 @@ const Footer = () => {
 
           return (
             <div key={index} className='last:pointer-events-none'>
-              <h1 className='text-blue-700 sm:text-xl sm:font-bold flex items-center'>
+              <h1 className='text-blue-700 sm:text-xl text-sm sm:font-bold flex items-center'>
                 <a 
                   target='_blank' 
                   href={item.link} 

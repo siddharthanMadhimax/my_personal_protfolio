@@ -1,20 +1,26 @@
 {
+  "homepage": "https://siddharthanMadhimax.github.io/my_personal_protfolio ",
   "name": "my_react_protfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.59",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.11.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.3.0"
+    "react-icons": "^5.3.0",
+    "react-parallax-tilt": "^1.7.276"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

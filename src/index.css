@@ -4,6 +4,7 @@
 
 body{
   background-color: black;
+  overflow-x: hidden;
 } 
 
 html {
@@ -22,3 +23,34 @@ html {
 .animate-spin-slow {
   animation: spin-slow 16s linear infinite; /* Adjust the duration as per your need */
 }
+
+.name-blink{
+  color: blue;
+  animation: name-blinking  1s steps(1) infinite;
+}
+
+@keyframes name-blinking {
+  0%{
+    opacity: 1;
+    text-shadow: 0 0 10px rgb(95, 0, 189), 0 0 30px rgb(81, 7, 241);
+
+  }
+  50%{
+    opacity: 0.5;
+    text-shadow: none;
+  }
+  100%{
+    opacity: 1;
+    text-shadow: 0 0 10px rgb(95, 0, 189), 0 0 30px rgb(81, 7, 241);
+
+  }
+}
+.type-effect{
+  color: rgba(255, 40, 173, 0.969);
+
+}
+.gradient-border{
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #551cff, #ff00ff) 1; 
+}
+

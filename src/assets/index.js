@@ -13,16 +13,20 @@ import cssImg from "./cssImage.jpeg"
 import jsimg from './jsImage.jpeg'
 import reactImg from "./reactImage.jpeg"
 import nodeImg from "./nodeImage.jpeg"
-import pythonImg from "./pythonImage.jpeg"
 import tailImg from "./tailWing.jpeg"
 import contacting from "./contacting1.mp4"
-
+import antd from "./antd.webp"
+import fastifyImage2 from "./fastifyImage2.jpg"
+import salesMaintain from "./salesMaintain.jpg"
 export {
+    salesMaintain,
+    fastifyImage2,
+    antd,
     logo,
     menu,
     hero,
     homeVideo,
     apple,doc,ecom,crypto,
-    ex,htmlImg,cssImg,reactImg,nodeImg,monDb,pythonImg,tailImg,jsimg,
+    ex,htmlImg,cssImg,reactImg,nodeImg,monDb,tailImg,jsimg,
     contacting
 }

@@ -1,4 +1,4 @@
-import { doc,ecom,apple,crypto,htmlImg,cssImg,jsimg,reactImg,nodeImg,tailImg,ex,monDb,pythonImg } from "../assets";
+import { doc,ecom,apple,crypto,htmlImg,cssImg,jsimg,reactImg,nodeImg,tailImg,ex,monDb,antd,fastifyImage2,salesMaintain } from "../assets";
 
 
 export const navLinks = [
@@ -23,6 +23,7 @@ export const navLinks = [
       id: "contact",
       title: "Contact",
     },
+    
   ];
 
   export const aboutMe=[
@@ -37,9 +38,9 @@ export const navLinks = [
       description:"I utilize Node.js, Express.js, and MongoDB for Back-End Development, building robust server-side applications and RESTful APIs that efficiently manage data integration with front-end technologies."
     },
     {
-      id:'python',
-      head:"Python Programming",
-      description:"I leverage Python for programming and am actively learning Django to build dynamic web applications, focusing on scalable back-end systems."
+      id:'Experience',
+      head:"Experience",
+      description:" Worked as a MERN Stack Trainee at Pixsoffice, a product-based company, developing a sales maintenance project. Learned techniques like infinite scroll, useQuery, and debounce for optimized performance."
     }
   ]
 
@@ -71,6 +72,13 @@ export const myProjects=[
     Description:'A comprehensive eCommerce application developed using full-stack technologies, allowing users to browse and purchase products online.',
     GitHubLink:"For Code",
     code:""
+  },
+  {
+    image:salesMaintain,
+    title:"Full stack sales maintenance",
+    GitHubLink:"for code",
+    Description:"The Sales Maintenance Application streamlines sales tracking, performance monitoring, and inventory management, enhancing productivity with real-time updates.",
+    code:"https://github.com/siddharthanMadhimax/sales-server"
   }
 ]
 
@@ -108,9 +116,15 @@ export const mySkills=[
     title:"Mongo DB"
   },
   {
-    image:pythonImg,
-    title:"Python"
-  }
+    image:antd,
+    title:"Antd"
+  },
+  {
+    image:fastifyImage2,
+    title:"Fastify"
+  },
+  
+ 
 ]
 
 
@@ -139,9 +153,9 @@ export const myEducation=[
 
 export const myFoot=[
   {
-    name:"instagram",
+    name:"gitHub",
     icon:"",
-    link:""
+    link:"https://github.com/siddharthanMadhimax"
   },
   {
     name:"linkedin",
