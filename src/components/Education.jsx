@@ -16,8 +16,9 @@ const Education = () => {
         >
           {myEducation.map((item, index) => {
             return (
-              < >
+              
                 <motion.div
+                key={index}
                   initial={{ opacity: 0, y: 100 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{
@@ -31,7 +32,7 @@ const Education = () => {
                   <h3 className='sm:text-xl mt-2 '>{item.grade}</h3>
                   <p className='mt-2 sm:block hidden'>{item.description}</p>
                 </motion.div>
-              </>
+              
             );
           })}
         </motion.div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { contacting } from '../assets';
 import emailjs from "emailjs-com";
+import {motion} from "framer-motion"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -56,9 +57,10 @@ const timming=()=>{
   };
   
   return (
-    <div id='contact' className='mt-10 sm:flex sm:flex-row flex-col'>
+    <div id='contact' className='mt-10 sm:flex sm:flex-row flex-col overflow-hidden'>
       {/* left side (Form) */}
-      <div className='sm:order-1 order-2 flex-1 rounded-lg'>
+      <motion.div initial={{opacity:0,x:-200}} whileInView={{opacity:1,x:0}} transition={{duration:1}}
+      className='sm:order-1 order-2 flex-1 rounded-lg'>
         <form 
           className='flex rounded-lg p-10 bg-gray-800 sm:flex-col flex-col max-sm:items-center justify-center'
           onSubmit={handleSubmit} // Corrected the onSubmit handler here
@@ -93,19 +95,25 @@ const timming=()=>{
           </div>
           {emailSent && show && <p className='text-green-500 mt-4'>Email sent successfully!</p>}
         </form>
-      </div>
+      </motion.div>
 
       {/* right side (Video) */}
       <div className='flex-grow sm:order-2 mt-10 order-1 sm:max-w-[600px] h-auto'>
-        <video
+
+       <motion.div initial={{opacity:0,x:100}} 
+       whileInView={{opacity:1,x:0}}
+       transition={{duration:1}}
+       >
+       <video
           autoPlay
           playsInline
           loop
           muted
-          className='w-full h-full pointer-events-none object-cover bg-black'
-        >
+          className='sm:w-[800px] sm:h-[450px] pointer-events-none object-cover bg-black'        >
           <source src={contacting} />
         </video>
+       </motion.div>
+       
       </div>
     </div>
   );
