@@ -14,9 +14,9 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className='navbar'>
       <nav className='text-white'>
-        <div className='flex items-center justify-between py-6 px-12'>
+        <div className='flex items-center justify-between py-4 max-sm:py-0 px-12'>
           <div className='flex-shrink-0'>
             <Link to="/">
               <img className='w-[40px] h-[40px]' src={logo} alt="Logo" />
@@ -45,8 +45,8 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className={`${toggle ? 'flex' : 'hidden'} sm:hidden bg-gray-900 text-white py-4 px-6 flex-col absolute w-full h-full top-[70px] z-10 `}>
-        <ul className='flex flex-col items-center gap-10 mt-20'>
+      <div className={`${toggle ? 'flex' : 'hidden'} sm:hidden bg-black text-white py-4 px-6 flex-col fixed top-0 left-0 w-full h-full z-50`}>
+      <ul className='flex flex-col items-center gap-10 mt-20'>
           {navLinks.map((link) => (
             <li
               key={link.id}

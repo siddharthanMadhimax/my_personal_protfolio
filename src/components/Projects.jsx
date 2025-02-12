@@ -3,7 +3,7 @@ import { myProjects } from '../constants';
 
 const Projects = () => {
   return (
-    <div id='projects' className='mt-20'>
+    <div id='projects' className='mt-20 overflow-hidden'>
       <h1 className='text-white text-5xl mb-8'>Projects</h1>
       <div className='sm:bg-gray-800 sm:p-12 grid sm:grid-cols-4 lg:grid-cols-4 grid-cols-1 gap-10 rounded-lg'>
         {myProjects.map((myPro, index) => {

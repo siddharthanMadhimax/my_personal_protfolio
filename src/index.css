@@ -54,3 +54,14 @@ html {
   border-image: linear-gradient(to right, #551cff, #ff00ff) 1; 
 }
 
+.navbar{
+  position: fixed;
+  z-index: 200;
+  background-color: black;
+  width: 100%;
+  top: 0;
+ 
+}
+.type-effect{
+  color: rgb(249, 43, 191);
+}

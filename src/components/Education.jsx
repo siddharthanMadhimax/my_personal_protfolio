@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 
 const Education = () => {
   return (
-    <div className='sm:mt-20 mt-10' id='education'>
+    <div className='overflow-hidden sm:mt-20 mt-10' id='education'>
       <h1 className='text-white sm:text-4xl mb-3 text-2xl sm:mb-5 font-bold'>Education</h1>
       <div className='text-gray-300 p-5 sm:flex items-center sm:py-10 rounded sm:flex-col bg-gray-900'>
         <motion.div
@@ -16,9 +16,7 @@ const Education = () => {
         >
           {myEducation.map((item, index) => {
             return (
-              <Tilt key={index} tiltMaxAngleX={5}
-                tiltMaxAngleY={2}
-                transitionSpeed={450}>
+              < >
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +31,7 @@ const Education = () => {
                   <h3 className='sm:text-xl mt-2 '>{item.grade}</h3>
                   <p className='mt-2 sm:block hidden'>{item.description}</p>
                 </motion.div>
-              </Tilt>
+              </>
             );
           })}
         </motion.div>

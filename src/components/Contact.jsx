@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { contacting } from '../assets';
 import emailjs from "emailjs-com";
-import {motion} from "framer-motion"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -57,35 +56,30 @@ const timming=()=>{
   };
   
   return (
-    <div className='mt-10'>
-      <h1 className='text-white sm:mb-5 mb-3 sm:text-4xl font-bold text-xl'>Contact Me</h1>
-      <div id='contact' className=' sm:flex sm:flex-row flex-col'>
-      
+    <div id='contact' className='mt-10 sm:flex sm:flex-row flex-col'>
       {/* left side (Form) */}
-     
-      <motion.div className='sm:order-1 order-2 flex-1 rounded-lg'
-      initial={{opacity:0,x:-200}} whileInView={{opacity:1,x:0}} transition={{duration:0.5}}>
+      <div className='sm:order-1 order-2 flex-1 rounded-lg'>
         <form 
           className='flex rounded-lg p-10 bg-gray-800 sm:flex-col flex-col max-sm:items-center justify-center'
           onSubmit={handleSubmit} // Corrected the onSubmit handler here
         >
           <div>
             <label className='text-white block mb-4 ' htmlFor="name">Name:</label>
-            <input className='input-form text-white sm:w-[600px] px-2 sm:px-5 mb-10 py-4 rounded-lg bg-black border' type="text" id='name'
+            <input className='text-white sm:w-[600px] px-2 sm:px-5 mb-10 py-4 rounded-lg bg-black border' type="text" id='name'
               value={formData.name}
               onChange={handleChange} 
             />
           </div>
           <div>
             <label className='text-white block mb-4' htmlFor="email">Email:</label>
-            <input className='input-form text-white sm:w-[600px] sm:px-5 px-2 mb-10 py-4 rounded-lg bg-black border' type="email" id='email'
+            <input className='text-white sm:w-[600px] sm:px-5 px-2 mb-10 py-4 rounded-lg bg-black border' type="email" id='email'
               value={formData.email}
               onChange={handleChange} 
             />
           </div>
           <div>
             <label className='text-white block mb-4' htmlFor="subject">Subject:</label>
-            <input className='input-form text-white sm:w-[600px] px-2 sm:px-5 py-4 rounded-lg bg-black border' type="text" id='subject' 
+            <input className='text-white sm:w-[600px] px-2 sm:px-5 py-4 rounded-lg bg-black border' type="text" id='subject' 
               value={formData.subject}
               onChange={handleChange} 
             />
@@ -99,11 +93,10 @@ const timming=()=>{
           </div>
           {emailSent && show && <p className='text-green-500 mt-4'>Email sent successfully!</p>}
         </form>
-      </motion.div>
+      </div>
 
       {/* right side (Video) */}
-      <motion.div initial={{opacity:0,x:200}} whileInView={{opacity:1,x:0}} transition={{duration:0.5}}
-       className='flex-grow sm:order-2 mt-10 order-1 sm:max-w-[600px] h-auto'>
+      <div className='flex-grow sm:order-2 mt-10 order-1 sm:max-w-[600px] h-auto'>
         <video
           autoPlay
           playsInline
@@ -113,8 +106,7 @@ const timming=()=>{
         >
           <source src={contacting} />
         </video>
-      </motion.div>
-    </div>
+      </div>
     </div>
   );
 };
